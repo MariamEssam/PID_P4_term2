@@ -11,7 +11,7 @@ using namespace std;
 PID::PID() 
 {
 	isInitialized = false;
-	IsTwiddled = true;
+	IsTwiddled = false;
 	step = 0;
 	cte_totalsquaredarea = 0;
 	tolerance = .0001;
