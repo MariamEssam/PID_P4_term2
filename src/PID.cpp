@@ -12,7 +12,7 @@ using namespace std;
 PID::PID() 
 {
 	isInitialized = false;
-	IsTwiddled = false;
+	IsTwiddled = true;
 	step = 0;
 	cte_totalsquaredarea = 0;
 	tolerance = .0001;
@@ -32,7 +32,7 @@ void PID::UpdateError(double cte) {
 	double delta_t =1;
 	if (!isInitialized)
 	{
-		Init(.15, .0030, 2.90);
+		Init(.15, .000030, 2.90);
 		previous_cte = cte;
 		cte_totalarea = 0;
 		isInitialized = true;
